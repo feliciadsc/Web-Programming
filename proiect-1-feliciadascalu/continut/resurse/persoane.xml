@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
+
+<persoane>
+    <persoana id="p1">
+        <nume>Dascalu</nume>
+        <prenume>Felicia</prenume>
+        <varsta>21</varsta>
+        <adresa id="a1">
+            <strada>Tolocilor</strada>
+            <numar>24</numar>
+            <localitate>Liteni</localitate>
+            <judet> Suceava </judet>
+            <tara> Romania </tara>
+        </adresa>
+        <cnp>6234567891023</cnp>
+        <facultate>AC Iasi</facultate>
+        <calitate>spirit de echipa</calitate>
+        <limba-straina>Germana</limba-straina>
+    </persoana>
+
+    <persoana id="p2">
+        <nume>Aciocirlanoaei</nume>
+        <prenume>Georgiana</prenume>
+        <varsta>21</varsta>
+        <adresa id="a2">
+            <strada>Flori</strada>
+            <numar>56</numar>
+            <localitate>Piatra-Neamt</localitate>
+            <judet> Neamt </judet>
+            <tara> Romania </tara>
+        </adresa>
+        <cnp>6234567857823</cnp>
+        <facultate>AC Iasi</facultate>
+        <calitate>ambitie</calitate>
+        <limba-straina>Engleza</limba-straina>
+    </persoana>
+
+    <persoana id="p3">
+        <nume>Andrew</nume>
+        <prenume>Johnson</prenume>
+        <varsta>45</varsta>
+        <adresa id="a3">
+            <strada>LIfe</strada>
+            <numar>1025</numar>
+            <localitate>Hollywood</localitate>
+            <judet> Los Angeles </judet>
+            <tara> SUA </tara>
+        </adresa>
+        <cnp>567881027</cnp>
+        <facultate>Informatica UAIC Iasi</facultate>
+        <calitate>comunicativ</calitate>
+        <limba-straina>Spaniola</limba-straina>
+    </persoana>
+
+    <persoana id="p4">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>35</varsta>
+        <adresa id="a4">
+            <strada>Brazilor</strada>
+            <numar>81</numar>
+            <localitate>Suceava</localitate>
+            <judet> Suceava </judet>
+            <tara> Romania </tara>
+        </adresa>
+        <cnp>1873269541204</cnp>
+        <facultate>Fara facultate</facultate>
+        <calitate>empatie</calitate>
+        <limba-straina>Engleza</limba-straina>
+    </persoana>
+
+    <persoana id="p5">
+        <nume>Popescu</nume>
+        <prenume>Vasile</prenume>
+        <varsta>87</varsta>
+        <adresa id="a5">
+            <strada>Veseliei</strada>
+            <numar>1</numar>
+            <localitate>Pipirig</localitate>
+            <judet> Neamt </judet>
+            <tara> Romania </tara>
+        </adresa>
+        <cnp>1875632596458</cnp>
+        <facultate>Politehnica Bucuresti</facultate>
+        <calitate>organizat</calitate>
+        <limba-straina>Rusa</limba-straina>
+    </persoana>
+
+</persoane>

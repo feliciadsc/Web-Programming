@@ -1,0 +1,27 @@
+
+<aside>
+    <section id="sec-1">
+        <h2>Informații Generale</h2>
+        <h3>Data și ora curentă:</h3>
+        <p id="data_si_ora"></p>
+        <h3>URL:</h3>
+        <p id="locația"></p>
+        <h3>Software:</h3>
+        <p id="software"></p>
+    </section>
+    <section id="sec-2">
+        <h2>Desen Canvas</h2>
+        <div>
+            <label>Contur: <input type="color" id="culoareContur" value="#000000"></label>
+            <label>Umplere: <input type="color" id="culoareUmplere" value="#add8e6"></label>
+            <button onclick="clearCanvas()">Șterge Tot</button>
+        </div>
+        <br>
+        <div id="desen-container">
+            <canvas id="canvasDesen" width="750" height="500" style="border:1px solid #000; cursor: crosshair;"></canvas>
+            <img id="imgDesen" alt="Desenul realizat pe canvas" src="imagini/desen_canvas.png">
+        </div>
+        <p id="canva">Încercați să recreați desenul pe canvas!</p>
+        
+    </section>
+</aside>

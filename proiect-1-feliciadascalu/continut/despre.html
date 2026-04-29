@@ -1,0 +1,108 @@
+<h3>Șabloane de Proiectare Folosite</h3>
+<section id="singleton">
+    <ul>
+        <li><b>Singleton</b></li>
+        <li><b>Factory (Fabrică)</b></li>
+    </ul>
+    <p> 
+        <b>Singleton</b> este un
+        <em>șablon de proiectare creațional</em>
+        care vă permite să vă asigurați că o clasă are
+        <b>o singură instanță,</b>
+        oferind în același timp un punct de acces global la această instanță.
+    </p>
+
+    <p>Șablonul Singleton rezolvă două probleme în același timp, încălcând
+        <em>Principiul Responsabilității Unice (Single Responsibility Principle):</em>
+    </p>
+    <ol>
+        <li>
+            <b>Garatează că o clasă are o singură instanță.</b>
+            <br><br>
+            Imaginați-vă că ați creat un obiect, dar după un timp decideți să creați unul nou. În loc să primiți un obiect nou, îl veți obține pe cel pe care l-ați creat deja.
+            <br><br>
+        </li>
+        <li>
+            <b>Oferă un punct de acces global la acea instanță.</b>
+            <br><br>
+            Această instanță poate fi accesată din orice parte a programului, protejând-o în același timp de a fi suprascrisă de alt cod.
+        </li>
+    </ol>
+
+    <figure>
+        <img alt="Imagine care descrie modul de funcționare al șablonului Singleton" 
+            src="imagini/singleton.png" 
+            height="350">
+    </figure>
+
+    <a href="https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples">Exemplu de utilizare Singleton</a>
+
+    <p><em>Avantaje și Dezavantaje:</em></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Avantaje</th>
+                <th>Dezavantaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Puteți fi sigur că o clasă are o singură instanță.</td>
+                <td>Încalcă Principiul Responsabilității Unice.</td>
+            </tr>
+            <tr>
+                <td>Obțineți un punct de acces global la acea instanță.</td>
+                <td>Șablonul Singleton poate masca un design deficitar, de exemplu, când componentele programului știu prea multe unele despre celelalte.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Obiectul de tip singleton este inițializat doar atunci când este solicitat pentru prima dată.</td>
+                <td>Șablonul necesită tratament special într-un mediu multithreaded pentru a evita crearea instanței de mai multe ori simultan.</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<section id="factory">
+    <p> 
+        <b>Factory (Metoda Fabrică)</b> este un
+        <em>șablon de proiectare creațional</em>
+        care oferă o interfață pentru crearea obiectelor într-o superclasă, dar permite subclaselor să modifice tipul obiectelor care vor fi create.
+    </p>
+
+    <figure>
+        <img alt="Imagine care descrie modul de funcționare al șablonului Factory" 
+            src="imagini/factory.png" 
+            height="350">
+    </figure>
+
+    <p><em>Avantaje și Dezavantaje:</em></p >
+    <table>
+        <thead>
+            <tr>
+                <th>Avantaje</th>
+                <th>Dezavantaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Evitați cuplarea strânsă între creator și produsele concrete.</td>
+                <td>Codul poate deveni mai complicat, deoarece trebuie să introduceți o mulțime de subclase noi pentru a implementa tiparul.</td>
+            </tr>
+            <tr>
+                <td><em>Single Responsibility Principle:</em> Puteți muta codul de creare a produsului într-un singur loc.</td>
+                <td>Cel mai bun scenariu este atunci când introduceți tiparul într-o ierarhie existentă de clase de creatori.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><em>Open/Closed Principle:</em> Puteți introduce noi tipuri de produse fără a strica codul client existent.</td>
+                <td>Necesită o structură clară de moștenire.</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<h3>LibGDX - Framework recomandat pentru dezvoltarea de jocuri</h3>
+<iframe src="https://libgdx.com/" width="100%" height="300"></iframe>

@@ -1,0 +1,44 @@
+
+<h2>Formular de inregistrare:</h2>
+<form id="form_inregistrare">
+    <fieldset>
+        <legend>Informații generale</legend>
+            <legend>Informații generale</legend>
+            <label>Nume utilizator: </label><input type="text" placeholder="Nume utilizator"> <br>
+            <label>Parola: </label><input type="password" placeholder="Parola"> <br>
+            <label>Nume: </label> <input type="text"> <br>
+            <label>Prenume: </label> <input type="text"> <br>
+            <label>Email: </label> <input type="email"> <br>
+            <label>Telefon: </label> <input type="tel"> <br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Informații personale</legend>
+            <label>Sexul: </label> 
+                <select name="Sexul">
+                    <option>Feminin</option>
+                    <option>Masculin</option>
+                </select> <br>
+            <label>Domeniul de activitate: </label> <br>
+                <input type="checkbox"> IT/Telecomunicații
+                <input type="checkbox"> Marketing
+                <input type="checkbox"> Construcții
+                <input type="checkbox"> Economie <br>
+
+            <label>Data nașterii: </label>
+                <input type="date"> <br>
+
+            <label>Ora nașterii: </label>
+                <input type="time"> <br>
+
+            <label>Vârsta: </label>
+                <input type="number"> <br>
+
+            <label>Adresa paginii personale(github/LinkedIn/etc): </label>
+                <input type="url"> <br>
+        
+    </fieldset>
+</form>
+
+
+<button onclick="trimiteInregistrare()">înregistrează</button>

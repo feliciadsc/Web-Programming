@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Laborator 2</title>
+    <link rel="stylesheet" type="text/css" href="css/stil.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function schimbaContinut(resursa, jsFisier, jsFunctie) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("continut").innerHTML = this.responseText;
+
+                    if (jsFisier) 
+                    {
+                        var elementScript = document.createElement('script');
+                        elementScript.onload = function () 
+                        {
+                            console.log("hello");
+                            if (jsFunctie) 
+                            {
+                                window[jsFunctie]();
+                            }
+                        };
+
+                        elementScript.src = jsFisier;
+                        document.head.appendChild(elementScript);
+                    } 
+                    else 
+                    {
+                        if (jsFunctie) 
+                        {
+                            window[jsFunctie]();
+                        }
+                    }
+                }
+            };
+            xhttp.open("GET", resursa + ".html", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Shepherd's Quest - Joc Java</h1>
+
+        <nav>
+            <a onclick="schimbaContinut('acasa')">Pagina Principală</a> 
+            <a onclick="schimbaContinut('despre')">Secțiunea Despre!</a> 
+            <a onclick="schimbaContinut('video')">Explicații video!</a> 
+            <a onclick="schimbaContinut('desen')">StandBy Animation</a>    
+            <a onclick="schimbaContinut('invat', 'js/script.js', 'pornireInvat')">Învăț</a>
+            <a onclick="schimbaContinut('verifica', 'js/script.js', 'verificaUtilizator')">Autentificare</a>
+            <a onclick="schimbaContinut('inregistreaza', 'js/script.js', 'trimiteInregistrare')">Înregistrează-te!</a>
+            <a onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a>
+            <a onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js')">Cumpărături</a>
+        </nav>  
+    </header>
+    <main id="continut">
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 Dascălu Ioana-Felicia</p>
+    </footer>
+</body>
+</html>
