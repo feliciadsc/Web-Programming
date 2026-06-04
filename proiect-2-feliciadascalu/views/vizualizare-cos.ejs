@@ -1,0 +1,25 @@
+<h1>Coșul tău de cumpărături</h1>
+
+<% if (produseInCos && produseInCos.length > 0) { %>
+    <table border="1" id="cos_cumparaturi">
+        <thead>
+            <tr>
+                <th>Nume Produs</th>
+                <th>Unitate</th>
+                <th>Preț Unitar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% produseInCos.forEach(produs => { %>
+                <tr>
+                    <td><%= produs.nume %></td>
+                    <td><%= produs.unitate_masura %></td>
+                    <td><%= produs.pret_unitar %> RON</td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <p><strong>Total produse în coș: <%= produseInCos.length %></strong></p>
+<% } else { %>
+    <p>Coșul tău este gol. Mergi la <a href="/">pagina principală</a> pentru a adăuga produse.</p>
+<% } %>

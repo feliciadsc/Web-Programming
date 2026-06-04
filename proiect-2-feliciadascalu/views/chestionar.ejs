@@ -1,0 +1,33 @@
+<h2>Bine ai venit, <%= utilizator %>!</h2>
+
+<form action="/rezultat-chestionar" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    
+    <% intrebari.forEach((item, indexIntrebare) => { %>
+        <div class="intrebare-container">
+            <p>
+                <strong>
+                    <%= (indexIntrebare + 1) %>. <%= item.intrebare %>
+                </strong>
+            </p>
+            
+            <% item.variante.forEach((varianta, indexVarianta) => { %>
+                <label>
+                    <% if (item.tip === 'checkbox') { %>
+                        <input type="checkbox" 
+                               name="raspuns<%= indexIntrebare %>[]" 
+                               value="<%= indexVarianta %>">
+                    <% } else { %>
+                        <input type="radio" 
+                               name="raspuns<%= indexIntrebare %>" 
+                               value="<%= indexVarianta %>" 
+                               [cite_start]required> 
+                    <% } %>
+                    <%= varianta %> 
+                </label><br>
+            <% }); %>
+        </div>
+    <% }); %>
+
+    <button type="submit">Trimite Răspunsurile</button>
+</form>

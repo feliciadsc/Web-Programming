@@ -1,0 +1,186 @@
+html, body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    background-color: #faf0ca;
+}
+
+h2, h1 {
+    color: #5c4e34;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+nav{
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #ee964b;
+    margin: auto 5px;
+}
+
+li a {
+    color: #5c4e34;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: rgb(253, 253, 253);
+    text-decoration: underline;
+}
+
+.intrebare-container, .rezultat-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #703904;
+    border-radius: 5px;
+    background-color: #ebd2b0;
+}
+
+.intrebare-container p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.intrebare-container label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.intrebare-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ee964b;
+    color: #5c4e34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: white;
+    background-color: #b30000;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #d3461e;
+    border-radius: 5px;
+    background-color: #b0ebda;
+}
+
+.result-container p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-container li {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #770202;
+    margin: 20px 0;
+}
+
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #e3c47a;
+    border-radius: 5px;
+    background-color: #ebe0b0;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 8px 0px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d39505;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #b30000;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #5d1a0d;
+}
+
+th {
+    background-color: #d37305;
+    color: #423621;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+

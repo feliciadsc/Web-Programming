@@ -1,0 +1,57 @@
+<body> 
+
+    <h2>Lista de Produse</h2>
+
+    <% if (utilizator && utilizator.rol === 'ADMIN') { %>
+        <div style="margin-bottom: 15px;">
+            <form action="/admin" method="GET">
+                <button type="submit" style="background-color: #007bff; color: white; padding: 8px 12px; font-weight: bold; cursor: pointer; border: none; border-radius: 4px;">
+                    + Adaugă Produs Nou
+                </button>
+            </form>
+        </div>
+    <% } %>
+
+    <table border="1" id="lista_produse" style="border-collapse: collapse; width: 100%; text-align: left;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 8px;">Nume</th>
+                <th style="padding: 8px;">Unitate</th>
+                <th style="padding: 8px;">Cantitate disponibilă</th>
+                <th style="padding: 8px;">Preț unitar</th>
+                <th style="padding: 8px;">Acțiuni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (produse && produse.length > 0) { %>
+                <% produse.forEach(produs => { %>
+                    <tr>
+                        <td style="padding: 8px;"><%= produs.nume %></td>
+                        <td style="padding: 8px;"><%= produs.unitate_masura %></td>
+                        <td style="padding: 8px;"><%= produs.cantitate %></td>
+                        <td style="padding: 8px;"><%= produs.pret_unitar %> RON</td>
+                        <td style="padding: 8px;">
+                            <% if (utilizator) { %>
+                                <form action="/adaugare_cos" method="POST" style="margin: 0;">
+                                    <input type="hidden" name="id" value="<%= produs.id %>">
+                                    <button type="submit" style="cursor: pointer; padding: 4px 8px;">Adaugă în coș</button>
+                                </form>
+                            <% } else { %>
+                                <button disabled style="background-color: gray; color: lightgray; cursor: not-allowed; padding: 4px 8px; border: none;">
+                                    Adaugă în coș
+                                </button>
+                            <% } %>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5" style="text-align: center; padding: 15px; color: gray;">
+                        Nu există produse disponibile în baza de date curentă.
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</body>

@@ -1,0 +1,49 @@
+<h2 id="results">Quiz Results</h2>
+
+<div class="rezultat-box">
+    <p><strong>Scorul tău: <%= scor %> din <%= intrebari.length %></strong></p>
+    
+    <hr>
+    
+    <% intrebari.forEach((intrebare, index) => { %>
+        <div class="rezultat-intrebare">
+            <p><strong><%= index + 1 %>. <%= intrebare.intrebare %></strong></p>
+            
+            <p>
+                Răspunsul tău: 
+                <span>
+                    <% 
+                        let raspunsulMeu = raspunsuriTrimise['raspuns' + index] || raspunsuriTrimise['raspuns' + index + '[]'];
+                        
+                        if (raspunsulMeu !== undefined) {
+                            if (Array.isArray(raspunsulMeu)) {
+                                let varianteAlese = raspunsulMeu.map(idx => intrebare.variante[Number(idx)]);
+                                %> <%= varianteAlese.join(', ') %> <%
+                            } else {
+                                // Dacă este o singură valoare (bifată la radio sau un singur checkbox)
+                                %> <%= intrebare.variante[Number(raspunsulMeu)] %> <%
+                            }
+                        } else {
+                            %> <em>Nespecificat</em> <%
+                        }
+                    %>
+                </span>
+            </p>
+            
+            <p style="color: rgb(88, 22, 0);">
+                Răspuns corect: 
+                <% 
+                    if (intrebare.tip === 'checkbox' && Array.isArray(intrebare.corect)) {
+                        let varianteCorecte = intrebare.corect.map(idx => intrebare.variante[idx]);
+                        %> <%= varianteCorecte.join(', ') %> <%
+                    } else {
+                        %> <%= intrebare.variante[intrebare.corect] %> <%
+                    }
+                %>
+            </p>
+        </div>
+        <hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
+    <% }) %>
+</div>
+
+<a href="/chestionar" class="btn-reincercare">Încearcă din nou</a>

@@ -1,0 +1,44 @@
+<body>
+
+    <h2>Panou Administrator - Adăugare Produs Nou</h2>
+    
+    <% if (utilizator && utilizator.nume) { %>
+        <p>Conectat ca administrator: <strong><%= utilizator.nume %></strong></p>
+    <% } %>
+
+    <form action="/admin/adaugare-produs" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <table border="1" id="formular_adaugare" >
+            <tbody>
+                <tr>
+                    <td><label for="nume"><strong>Nume produs:</strong></label></td>
+                    <td><input type="text" id="nume" name="nume" required></td>
+                </tr>
+                <tr>
+                    <td><label for="unitate_masura"><strong>Unitate de măsură:</strong></label></td>
+                    <td><input type="text" id="unitate_masura" name="unitate_masura" placeholder="ex: kg, buc" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cantitate"><strong>Cantitate inițială:</strong></label></td>
+                    <td><input type="number" id="cantitate" name="cantitate" step="0.01" min="0" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pret_unitar"><strong>Preț unitar (RON):</strong></label></td>
+                    <td><input type="number" id="pret_unitar" name="pret_unitar" step="0.01" min="0" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding: 10px;">
+                        <button type="submit" style="cursor: pointer; padding: 6px 12px; font-weight: bold;">
+                            Adaugă în baza de date
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <br>
+    <p><a href="/">Înapoi la Lista de Produse</a></p>
+
+</body>
