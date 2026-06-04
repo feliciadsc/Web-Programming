@@ -1,0 +1,62 @@
+[
+  {
+    "intrebare": "Care este singurul fruct care are semințele în exterior?",
+    "variante": ["kiwi", "mango", "ananas", "căpșuna"],
+    "corect": 3,
+    "tip": "radio"
+  },
+  {
+    "intrebare": "Care dintre următoarele este considerat un fruct, deși în bucătărie este tratat ca legumă?",
+    "variante": ["roșia", "castravetele", "ardeiul", "morcovul"],
+    "corect": 0,
+    "tip": "radio"
+  },
+  {
+    "intrebare": "Care fruct este cunoscut drept „regele fructelor” în Asia de Sud-Est?",
+    "variante": ["mango", "durian", "papaya", "fructul dragonului"],
+    "corect": 1,
+    "tip": "radio"
+  },
+  {
+    "intrebare": "Ce fruct conține cea mai mare cantitate de vitamina C?",
+    "variante": ["kiwi", "banana", "ananas", "portocala"],
+    "corect": 0,
+    "tip": "radio"
+  },
+  {
+    "intrebare": "Afinele au o mare concentrație de:",
+    "variante": [ "vitamina A", "calciu", "antioxidanți", "fier"],
+    "corect": 2,
+    "tip": "radio"
+  },
+  {
+    "intrebare": "Care dintre următoarele fructe cresc în copaci (pomi fructiferi)?",
+    "variante": ["Mere", "Căpșuni", "Prune", "Pepeni"],
+    "corect": [0, 2],
+    "tip": "checkbox"
+  },
+  {
+    "intrebare": "Alegeți fructele care sunt citrice:",
+    "variante": ["Lămâie", "Grepfrut", "Portocală", "Banană"],
+    "corect": [0, 1, 2],
+    "tip": "checkbox"
+  },
+  {
+    "intrebare": "Care dintre următoarele sunt fructe de pădure?",
+    "variante": ["Zmeură", "Afine", "Piersici", "Mure"],
+    "corect": [0, 1, 3],
+    "tip": "checkbox"
+  },
+  {
+    "intrebare": "Ce fructe au, în mod obișnuit, o singură sămânță mare (sâmbure) în interior?",
+    "variante": ["Piersica", "Cireașa", "Marul", "Avocado"],
+    "corect": [0, 1, 3],
+    "tip": "checkbox"
+  },
+  {
+    "intrebare": "Identificați fructele care au un conținut foarte ridicat de apă (peste 85%):",
+    "variante": ["Pepenele roșu", "Căpșunile", "Nucile", "Portocalele"],
+    "corect": [0, 1, 3],
+    "tip": "checkbox"
+  }
+]

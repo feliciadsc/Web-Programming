@@ -1,0 +1,32 @@
+[
+  {
+    "utilizator": "test",
+    "parola": "$2b$10$ewoaF.WjYEuttn10nrJoIeaIId0CdY18UL/.AcmjKcyyrtdmgmzli",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "felicia122",
+    "parola": "$2b$10$.8MoS4NjV8Tu4yhrwA53fu.aISOY6h0Td5hm..k6..9u6eAPHYUVW",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "feli",
+    "parola": "$2b$10$dRhki5SKcoODrjZYNi4iCOt.6./O.AkCTscr98mxQC2qHGcaKPShO",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "uuuu",
+    "parola": "$2b$10$rABFyjNuaaul6HNCMdLh1uqidsvv5vybSKDfYnrvlMp02JwoG90Ni",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "eu",
+    "parola": "$2b$10$MdgwLekUg3gzP/KzrQK2.O9/.6MCGBB9WMjdew1EgDp/qL4W.Hzg.",
+    "rol": "USER"
+  },
+  {
+    "utilizator": "admin",
+    "parola": "$2b$10$Y.a/8Dnugr63D905UTgIeudN2ylUOFNZ4MAWfEBEE4D312qvAvpIu",
+    "rol": "ADMIN"
+  }
+]
